@@ -17,6 +17,7 @@ compare_prefix = ""
 for i in user_string: 
 
     #within for loop, create if statement to compare iteration and user_string index to user_prefix
+    #Index Error
     if i and user_string[index_count] == user_prefix[index_count]:
 
         #if true, add the character to compare_prefix and add 1 to index_count
