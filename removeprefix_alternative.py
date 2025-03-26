@@ -16,20 +16,26 @@ compare_prefix = ""
 #create a for loop to iterate through user_string
 for i in user_string: 
 
-    #within for loop, create if statement to compare iteration and user_string index to user_prefix
-    #Index Error
-    if i and user_string[index_count] == user_prefix[index_count]:
+    #create if statement for terminate flag
+    if terminate_flag:
 
-        #if true, add the character to compare_prefix and add 1 to index_count
-        compare_prefix += i
-        index_count += 1
+        #within for loop, create if statement to compare iteration and user_string index to user_prefix
+        #Index Error
+        if i and user_string[index_count] == user_prefix[index_count]:
 
-        #if compare_prefix equals user_prefix, replace compare_prefix with "" then print result
-        if compare_prefix == user_prefix:
-            user_string = user_prefix.replace(compare_prefix, "")
-            print(user_prefix)
+            #if true, add the character to compare_prefix and add 1 to index_count
+            compare_prefix += i
+            index_count += 1
 
-    #else, set terminate_flag to false and break
-    else:
-        terminate_flag = False
-        break
+            #if compare_prefix equals user_prefix, replace compare_prefix with "" then print result
+            if compare_prefix == user_prefix:
+                user_string = user_string.replace(compare_prefix, "")
+                print(user_string)
+                terminate_flag = False
+                break
+
+        #else, set terminate_flag to false and break
+        else:
+            print(user_string)
+            terminate_flag = False
+            break
