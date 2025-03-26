@@ -11,11 +11,11 @@ for i in user_string:
     if i.isspace() and alpha_flag: 
 
         #within if statement, replace whitespace into nothing or ""
-        new_string = user_string.replace(i, "")
+        user_string = user_string.replace(i, "", 1)
 
     #else, break the whole for loop
     else:
         alpha_flag = False
         break
 
-print(new_string)
+print(user_string)
