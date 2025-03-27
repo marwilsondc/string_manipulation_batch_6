@@ -27,5 +27,12 @@ def title_alt(str):
         #else is for characters outside alpha, including numbers, whitespaces, and symbols
         else:
 
-            #if above statement is True, set is_separated to True
+            #if above statement is True, add iteration to final_result and set is_separated to True
+            final_result += i
             is_separated = True
+    
+    return final_result
+
+#tester
+user_string = input("input a string: ")
+print(title_alt(user_string))
